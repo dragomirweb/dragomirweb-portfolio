@@ -82,8 +82,8 @@ var angular = __webpack_require__(0);
 var dragomirWeb = angular.module('dragomirWeb', []);
 
 __webpack_require__(3);
-__webpack_require__(5);
-__webpack_require__(7);
+__webpack_require__(6);
+__webpack_require__(8);
 
 
 /***/ }),
@@ -33929,23 +33929,10 @@ $provide.value("$locale", {
 "use strict";
 
 __webpack_require__(9);
+__webpack_require__(4);
 
 /***/ }),
-/* 4 */,
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(8);
-
-/***/ }),
-/* 6 */,
-/* 7 */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-/* 8 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33953,11 +33940,40 @@ __webpack_require__(8);
 var angular = __webpack_require__(0);
 var dragomirWeb = angular.module('dragomirWeb');
 
-dragomirWeb.directive('navi', function() {
+dragomirWeb.controller('MainController', ['$scope', function($scope) {
+
+}]);
+
+
+/***/ }),
+/* 5 */,
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(7);
+
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var angular = __webpack_require__(0);
+var dragomirWeb = angular.module('dragomirWeb');
+
+dragomirWeb.directive('navigation', function() {
     return {
+        restrict: 'E',
         templateUrl: './templates/nav.html'
     };
 });
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
 
 
 /***/ }),
@@ -33968,12 +33984,11 @@ dragomirWeb.directive('navi', function() {
 
 var angular = __webpack_require__(0);
 var dragomirWeb = angular.module('dragomirWeb');
-var data = __webpack_require__(10);
+var nav = __webpack_require__(10);
 
-dragomirWeb.controller('MainController', ['$scope', function($scope) {
-    $scope.navItems = data;
+dragomirWeb.controller('NavController', ['$scope', function($scope) {
+    $scope.navItems = nav;
 }]);
-
 
 /***/ }),
 /* 10 */

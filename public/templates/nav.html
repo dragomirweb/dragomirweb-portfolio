@@ -1,3 +1,29 @@
-<ul>
-    <li ng-repeat="navItem in navItems"><a href="http://dragomirweb.com/{{navItem.pagina.toLowerCase() + '.html'}}">{{navItem.pagina}}</a></li>
-</ul>
+<div class="navDivider dark-primary-color"></div>
+<nav class="default-primary-color">
+    <div class="nav-wrapper">
+        <a href="#" id="mobile-menu" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+        <a href="#0" class="brand-logo center">DragomirWeb</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li ng-repeat="navItem in navItems"><a href="#0">{{navItem.pagina}}</a></li>
+        </ul>
+        <ul id="slide-out" class="side-nav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="static/images/office.jpg">
+                </div>
+                <a href="#!user"><img class="circle" src="static/images/profile_pic.jpg"></a>
+                <a href="#!name"><span class="white-text name">Dragomir Dan</span></a>
+                <a href="#!email"><span class="white-text email">dan@dragomirweb.com</span></a>
+            </div>
+        </li>
+        <div ng-repeat="navItem in navItems"><li><a href="#0">{{navItem.pagina}}</a></li>
+        <li>
+            <div class="divider"></div>
+        </li></div>
+        
+        
+    </ul>
+    </div>
+    
+</nav>

@@ -7,13 +7,29 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title></title>
     <script type="text/javascript" src="static/angular.bundle.app.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="static/css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="static/css/style.css" type="text/css" />
 </head>
 
 <body ng-controller="MainController">
-    <header>
-        <navi></navi>
-    </header>
 
+    <header ng-controller="NavController">
+        <navigation></navigation>
+        <div class="row parallax-container">
+            
+        </div>
+    </header>
+    <article style="padding-bottom: 3000px;">
+       
+    </article>
+
+    
+    <script type="text/javascript" src="static/js/materialize.min.js"></script>
+    <script type="text/javascript" src="static/js/main.js"></script>
 </body>
 
 </html>
