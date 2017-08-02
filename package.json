@@ -18,6 +18,7 @@
   "homepage": "https://github.com/dragomirweb/dragomirweb-portfolio#readme",
   "dependencies": {
     "angular": "^1.6.5",
+    "angular-route": "^1.6.5",
     "express": "^4.15.3"
   },
   "devDependencies": {

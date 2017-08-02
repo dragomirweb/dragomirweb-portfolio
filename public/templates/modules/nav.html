@@ -1,0 +1,28 @@
+<nav class="top-nav amber darken-4" attach-nav>
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+    <div class="container">
+        <div class="nav-wrapper"><a class="page-title">Page Title</a></div>
+    </div>
+    <ul id="slide-out" class="side-nav fixed">
+        <li <div class="user-view">
+            <div class="background">
+                <img src="static/images/office.jpg">
+            </div>
+            <a href="#top">
+                <img class="svglogo" src="static/images/logo.svg" alt="Logo"></img>
+            </a>
+            <a attach-modal href="#contactModal" class="modal-trigger"><span class="white-text name">DragomirWeb</span></a>
+            <a attach-modal href="#contactModal" class="modal-trigger"><span class="white-text email">dan@dragomirweb.com</span></a>
+            </div>
+        </li>
+        <li ng-repeat="navItem in navItems"><a close-nav class="navitem" href="#!/{{navItem.pagina.toLowerCase().trim()}}">{{navItem.pagina}}</a></li>
+    </ul>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <h4 class="black-text">Formular contact</h4>
+            <modal-contact></modal-contact>
+
+        </div>
+    </div>
+</nav>

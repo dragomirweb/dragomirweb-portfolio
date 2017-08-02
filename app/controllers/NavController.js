@@ -5,4 +5,5 @@ var nav = require("./../data/data.json");
 
 dragomirWeb.controller('NavController', ['$scope', function($scope) {
     $scope.navItems = nav;
+
 }]);

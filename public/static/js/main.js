@@ -1,12 +1,1 @@
-
-$( document ).ready(function() {
-
-
-});
-(function($){
-  $(function(){
-
-    $('#mobile-menu').sideNav();
-
-  }); // end of document ready
-})(jQuery);
+$('.page-title').text('Hello World');

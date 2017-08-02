@@ -1,6 +1,9 @@
 [
-    { "pagina": "Acasa" },
-    { "pagina": "Servicii" },
-    { "pagina": "Contact" }
-    
+    {"pagina": "Home"},
+    {"pagina": "Despre noi"},
+    {"pagina": "Portofoliu"},
+    {"pagina": "Servicii"}, 
+    {"pagina": "Intrebari si raspunsuri"},
+    {"pagina": "Contact"}
+
 ]
