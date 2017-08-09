@@ -34,3 +34,12 @@ dragomirWeb.directive('attachModal', function() {
     }
   };
 });
+
+dragomirWeb.directive('parallax', function() {
+  return {
+    restrict: 'A',
+    link: function(scope, element) {
+      $('.parallax').parallax();
+    }
+  };
+});

@@ -2,15 +2,36 @@
 <html lang=en ng-app="dragomirWeb">
 
 <head>
+    <script type="text/javascript" src="static/angular.bundle.app.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
-    <script type="text/javascript" src="static/angular.bundle.app.js"></script>
+    <title ng-bind="ngMeta.title"></title>
+    <meta name="description" content="{{ngMeta.description}}" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="static/css/materialize.min.css" media="screen,projection" />
     <link rel="stylesheet" href="static/css/style.css" type="text/css" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="static/images/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="static/images/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="static/images/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="static/images/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="static/images/favicon/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="static/images/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="static/images/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="static/images/favicon/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="static/images/favicon/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="static/images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="static/images/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="static/images/favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="static/images/favicon/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="static/images/favicon/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="static/images/favicon/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="static/images/favicon/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="static/images/favicon/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="static/images/favicon/mstile-310x310.png" />
 </head>
 
 <body ng-controller="MainController">
@@ -18,9 +39,11 @@
     <header ng-controller="NavController">
         <navigation></navigation>
     </header>
+    
     <main ng-view>
 
     </main>
+    
     <article style="padding-bottom: 3000px;">
 
     </article>
@@ -28,12 +51,11 @@
     <footer class="page-footer amber darken-4">
         <div class="fixed-action-btn horizontal click-to-toggle">
             <a class="btn-floating btn-large amber">
-                <i class="material-icons">chat</i>
+                <i class="material-icons">arrow_left</i>
             </a>
             <ul>
-                <li><a class="btn-floating white facebook"></a>
-                </li>
-                <li><a class="btn-floating twitter-color twitter"></a></li>
+                <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+                <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
                 <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
                 <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
             </ul>
@@ -62,7 +84,7 @@
             </div>
         </div>
     </footer>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="static/js/lib/jquery.js"></script>
     <script type="text/javascript" src="static/js/materialize.min.js"></script>
     <script type="text/javascript" src="static/js/main.js"></script>
 </body>

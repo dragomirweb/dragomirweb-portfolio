@@ -1,5 +1,6 @@
     body {
         overflow-x: hidden;
+
     }
 
     header,
@@ -8,11 +9,30 @@
         padding-left: 300px;
     }
 
-    @media only screen and (max-width: 992px) {
+    section {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    section:nth-child(1) {
+        margin-top: 100px;
+    }
+
+    @media (max-width: 992px) {
+        section {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
         header,
         main,
         footer {
             padding-left: 0;
+        }
+        .button-collapse i {
+            color: #000;
+        }
+        section:nth-child(1) {
+            margin-top: 40px;
         }
     }
 
@@ -55,7 +75,9 @@
 
     .container {
         width: 100%;
+        max-width: 100%;
     }
+
 
     nav {
         height: 122px;
@@ -68,31 +90,45 @@
         position: relative;
         height: 100%;
     }
+
     nav .page-title {
+        font-weight: 300;
         font-size: 48px;
-        line-height: 122px;
+        line-height: 48.3px;
+        padding-left: 5%;
+        padding-top: 16px;
+        display: block;
+        margin: 0;
+    }
+
+    nav .page-subtitle {
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 50px;
+        padding-left: 8%;
+        display: block;
+    }
+
+    .side-nav li>a:hover {
+        color: #FFF;
+        background-color: rgba(0, 0, 0, 0.70);
     }
 
     .center-on-small-only {
         display: block;
     }
 
-    .facebook {
-        background: url('../images/round-facebook.svg');
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
+    .mobile-logo {
+        position: absolute;
+        left: calc(50% - 40px);
+        top: 5px;
     }
 
-    .twitter {
-        background: url('../images/round-twitter.svg');
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
+    @media (min-width: 992px) {
+        .mobile-logo {
+            display: none;
+        }
     }
-
-    .twitter-color {
-        color: #5AA8DF;
-        background-color: #5AA8DF;
+    .parallax-container {
+      height: 800px;
     }
-    
