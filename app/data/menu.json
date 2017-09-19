@@ -1,9 +1,16 @@
 [
-    {"pagina": "Home"},
-    {"pagina": "Despre noi"},
-    {"pagina": "Portofoliu"},
-    {"pagina": "Servicii"}, 
-    {"pagina": "Intrebari si raspunsuri"},
-    {"pagina": "Contact"}
+    { "pagina": "Home" },
+    { "pagina": "Portofoliu" },
+    {
+        "pagina": "Servicii",
+        "subpages": [
+            { "pagina": "Site de Prezentare" },
+            { "pagina": "Magazin Online" },
+            { "pagina": "Web Design" },
+            { "pagina": "Aplicatii Web" }
+        ]
+    },
+    { "pagina": "Intrebari si raspunsuri" },
+    { "pagina": "Contact" }
 
 ]

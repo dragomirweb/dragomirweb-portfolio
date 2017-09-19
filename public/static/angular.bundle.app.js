@@ -113,9 +113,9 @@ module.exports = angular;
 
 
 
-var base64 = __webpack_require__(36)
-var ieee754 = __webpack_require__(37)
-var isArray = __webpack_require__(38)
+var base64 = __webpack_require__(38)
+var ieee754 = __webpack_require__(39)
+var isArray = __webpack_require__(40)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -2413,6 +2413,14 @@ function nextTick(fn, arg1, arg2, arg3) {
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(23);
+module.exports = 'ngRoute';
+
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
 /* eslint-disable node/no-deprecated-api */
 var buffer = __webpack_require__(2)
 var Buffer = buffer.Buffer
@@ -2475,14 +2483,6 @@ SafeBuffer.allocUnsafeSlow = function (size) {
   }
   return buffer.SlowBuffer(size)
 }
-
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(23);
-module.exports = 'ngRoute';
 
 
 /***/ }),
@@ -2922,7 +2922,7 @@ exports.Readable = exports;
 exports.Writable = __webpack_require__(18);
 exports.Duplex = __webpack_require__(4);
 exports.Transform = __webpack_require__(20);
-exports.PassThrough = __webpack_require__(46);
+exports.PassThrough = __webpack_require__(48);
 
 
 /***/ }),
@@ -2961,7 +2961,7 @@ var processNextTick = __webpack_require__(7);
 module.exports = Readable;
 
 /*<replacement>*/
-var isArray = __webpack_require__(40);
+var isArray = __webpack_require__(42);
 /*</replacement>*/
 
 /*<replacement>*/
@@ -2985,7 +2985,7 @@ var Stream = __webpack_require__(16);
 // TODO(bmeurer): Change this back to const once hole checks are
 // properly optimized away early in Ignition+TurboFan.
 /*<replacement>*/
-var Buffer = __webpack_require__(8).Buffer;
+var Buffer = __webpack_require__(9).Buffer;
 var OurUint8Array = global.Uint8Array || function () {};
 function _uint8ArrayToBuffer(chunk) {
   return Buffer.from(chunk);
@@ -3001,7 +3001,7 @@ util.inherits = __webpack_require__(6);
 /*</replacement>*/
 
 /*<replacement>*/
-var debugUtil = __webpack_require__(41);
+var debugUtil = __webpack_require__(43);
 var debug = void 0;
 if (debugUtil && debugUtil.debuglog) {
   debug = debugUtil.debuglog('stream');
@@ -3010,7 +3010,7 @@ if (debugUtil && debugUtil.debuglog) {
 }
 /*</replacement>*/
 
-var BufferList = __webpack_require__(42);
+var BufferList = __webpack_require__(44);
 var destroyImpl = __webpack_require__(17);
 var StringDecoder;
 
@@ -4409,7 +4409,7 @@ util.inherits = __webpack_require__(6);
 
 /*<replacement>*/
 var internalUtil = {
-  deprecate: __webpack_require__(45)
+  deprecate: __webpack_require__(47)
 };
 /*</replacement>*/
 
@@ -4418,7 +4418,7 @@ var Stream = __webpack_require__(16);
 /*</replacement>*/
 
 /*<replacement>*/
-var Buffer = __webpack_require__(8).Buffer;
+var Buffer = __webpack_require__(9).Buffer;
 var OurUint8Array = global.Uint8Array || function () {};
 function _uint8ArrayToBuffer(chunk) {
   return Buffer.from(chunk);
@@ -5001,7 +5001,7 @@ Writable.prototype._destroy = function (err, cb) {
   this.end();
   cb(err);
 };
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(43).setImmediate, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(45).setImmediate, __webpack_require__(0)))
 
 /***/ }),
 /* 19 */
@@ -5456,19 +5456,19 @@ function done(stream, er, data) {
 
 "use strict";
 
+
 var angular = __webpack_require__(1);
-var ngRoute = __webpack_require__(9);
+var ngRoute = __webpack_require__(8);
 var ngMeta = __webpack_require__(10);
 
 var dragomirWeb = angular.module('dragomirWeb', ['ngRoute', 'ngMeta']);
 
 
 
-
 __webpack_require__(24);
 __webpack_require__(25);
-__webpack_require__(29);
-__webpack_require__(33);
+__webpack_require__(31);
+__webpack_require__(35);
 
 
 
@@ -40550,20 +40550,21 @@ function ngViewFillContentFactory($compile, $controller, $route) {
 "use strict";
 
 var angular = __webpack_require__(1);
-var ngRoute = __webpack_require__(9);
+var ngRoute = __webpack_require__(8);
 var ngMeta = __webpack_require__(10);
 
 var dragomirWeb = angular.module('dragomirWeb');
 
 
-dragomirWeb.config(['$routeProvider', 'ngMetaProvider', function($routeProvider, $ngMetaProvider) {
+dragomirWeb.config(['$locationProvider', '$routeProvider', 'ngMetaProvider', function($locationProvider, $routeProvider, $ngMetaProvider) {
+    $locationProvider.hashPrefix('');
     $routeProvider
         .when('/Home', {
             templateUrl: './templates/views/home.html',
             data: {
                 meta: {
                     'title': 'DragomirWeb',
-                    'subtitle': 'Servicii profesionale de IT, Web Design si Ecommerce',
+                    'subtitle': 'Servicii profesionale - Site de prezentare, Magazin Online, Web Design, Aplicatii web',
                     'description': 'This is the description shown in Google search results'
                 }
             }
@@ -40573,6 +40574,7 @@ dragomirWeb.config(['$routeProvider', 'ngMetaProvider', function($routeProvider,
             data: {
                 meta: {
                     'title': 'Despre noi',
+                    'subtitle': 'Servicii profesionale - Site de prezentare, Magazin Online, Web Design, Aplicatii web',
                     'description': 'This is the description shown in Google search results'
                 }
             }
@@ -40582,24 +40584,18 @@ dragomirWeb.config(['$routeProvider', 'ngMetaProvider', function($routeProvider,
             data: {
                 meta: {
                     'title': 'Portofoliu',
+                    'subtitle': 'Servicii profesionale - Site de prezentare, Magazin Online, Web Design, Aplicatii web',
                     'description': 'This is the description shown in Google search results'
                 }
             }
         })
-        .when('/servicii', {
-            templateUrl: './templates/views/servicii.html',
-            data: {
-                meta: {
-                    'title': 'Servicii',
-                    'description': 'This is the description shown in Google search results'
-                }
-            }
-        })
+        
         .when('/intrebari si raspunsuri', {
             templateUrl: './templates/views/Q&A.html',
             data: {
                 meta: {
                     'title': 'Intrebari si raspunsuri',
+                    'subtitle': 'Servicii profesionale - Site de prezentare, Magazin Online, Web Design, Aplicatii web',
                     'description': 'This is the description shown in Google search results'
                 }
             }
@@ -40609,6 +40605,47 @@ dragomirWeb.config(['$routeProvider', 'ngMetaProvider', function($routeProvider,
             data: {
                 meta: {
                     'title': 'Contact',
+                    'subtitle': 'Servicii profesionale - Site de prezentare, Magazin Online, Web Design, Aplicatii web',
+                    'description': 'This is the description shown in Google search results'
+                }
+            }
+        })
+        .when('/servicii/site de prezentare', {
+            templateUrl: './templates/views/servicii/sitedeprezentare.html',
+            data: {
+                meta: {
+                    'title': 'Site de prezentare',
+                    'subtitle': 'Servicii profesionale - Site de prezentare, Magazin Online, Web Design, Aplicatii web',
+                    'description': 'This is the description shown in Google search results'
+                }
+            }
+        })
+        .when('/servicii/magazin online', {
+            templateUrl: './templates/views/servicii/magazinonline.html',
+            data: {
+                meta: {
+                    'title': 'Magazin Online',
+                    'subtitle': 'Servicii profesionale - Site de prezentare, Magazin Online, Web Design, Aplicatii web',
+                    'description': 'This is the description shown in Google search results'
+                }
+            }
+        })
+        .when('/servicii/web design', {
+            templateUrl: './templates/views/servicii/webdesign.html',
+            data: {
+                meta: {
+                    'title': 'Web Design',
+                    'subtitle': 'Servicii profesionale - Site de prezentare, Magazin Online, Web Design, Aplicatii web',
+                    'description': 'This is the description shown in Google search results'
+                }
+            }
+        })
+        .when('/servicii/aplicatii web', {
+            templateUrl: './templates/views/servicii/aplicatii.html',
+            data: {
+                meta: {
+                    'title': 'Aplicatii',
+                    'subtitle': 'Servicii profesionale - Site de prezentare, Magazin Online, Web Design, Aplicatii web',
                     'description': 'This is the description shown in Google search results'
                 }
             }
@@ -40628,6 +40665,7 @@ dragomirWeb.config(['$routeProvider', 'ngMetaProvider', function($routeProvider,
 
 __webpack_require__(26);
 __webpack_require__(28);
+__webpack_require__(29);
 
 /***/ }),
 /* 26 */
@@ -40650,7 +40688,7 @@ dragomirWeb.controller('NavController', ['$scope', function($scope) {
 /* 27 */
 /***/ (function(module, exports) {
 
-module.exports = [{"pagina":"Home"},{"pagina":"Despre noi"},{"pagina":"Portofoliu"},{"pagina":"Servicii"},{"pagina":"Intrebari si raspunsuri"},{"pagina":"Contact"}]
+module.exports = [{"pagina":"Home"},{"pagina":"Portofoliu"},{"pagina":"Servicii","subpages":[{"pagina":"Site de Prezentare"},{"pagina":"Magazin Online"},{"pagina":"Web Design"},{"pagina":"Aplicatii Web"}]},{"pagina":"Intrebari si raspunsuri"},{"pagina":"Contact"}]
 
 /***/ }),
 /* 28 */
@@ -40659,11 +40697,22 @@ module.exports = [{"pagina":"Home"},{"pagina":"Despre noi"},{"pagina":"Portofoli
 "use strict";
 
 var angular = __webpack_require__(1);
+var ngRoute = __webpack_require__(8);
 var dragomirWeb = angular.module('dragomirWeb');
 
-dragomirWeb.controller('MainController', ['$scope', '$http', function($scope, $http) {
+dragomirWeb.controller('MainController', ['$scope', '$http', '$location', function($scope, $http, $location) {
 
+$scope.copy = function(){
+    var today = new Date();
+    var year = today.getFullYear();
+    return year + ' DragomirWeb.com';
+};
 
+$scope.isActive = function(viewLocation){
+    var view = viewLocation.toString();
+    var active = (view === $location.path());
+     return active;
+}
 
     // $http({
     //     method: 'GET',
@@ -40681,13 +40730,34 @@ dragomirWeb.controller('MainController', ['$scope', '$http', function($scope, $h
 /* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(30);
-__webpack_require__(31);
-__webpack_require__(32);
+"use strict";
+
+var angular = __webpack_require__(1);
+var dragomirWeb = angular.module('dragomirWeb');
+var qna = __webpack_require__(30);
+
+dragomirWeb.controller('QController', ['$scope', function($scope) {
+    $scope.qItems = qna;
+}]);
 
 
 /***/ }),
 /* 30 */
+/***/ (function(module, exports) {
+
+module.exports = [{"intrebare":"Care este publicul tinta"},{"intrebare":"Care este scopul site-ului?"},{"intrebare":"Care sunt valorile de baza ale firmei si cum le exprimați vizitatorilor dvs. ?"},{"intrebare":"Ce va difera de competitori dvs. ?"},{"intrebare":"De ce ar trebui oamenii sa faca afaceri cu dvs. mai degraba decat concurentii dvs.?"},{"intrebare":"Descrieti stilul site-ului dorit."},{"intrebare":"Aveti culori specifice companiei care trebuiesc utilizate?"},{"intrebare":"Puteti furniza numerele Pantone pentru culorile companiei dvs.?"},{"intrebare":"Aveti alte materiale pe care site-ul trebuie sa le potriveasca intr-un fel (brosuri, materiale de presa etc.)?"},{"intrebare":"Ce va place la site-ul dvs. curent?"},{"intrebare":"Exista vreo functionalitate sau optiuni pe site-ul dvs. curent pe care intentionati sa il pastrati (inafara continutului)?"},{"intrebare":"Care sunt primele 3 frustrari ale site-ului dvs. actual?"},{"intrebare":"Exista ceva pe site-urile concurentilor "},{"intrebare":"Exista site/uri cu un design/model care va atrage?"},{"intrebare":"Doriti acele design-uri incorporate in site-ul dvs.?"},{"intrebare":"Denumiți 3 lucruri care considerati dvs. importante in proiectarea noului dvs. site web"},{"intrebare":"Denumiți 3 lucruri care considerati mai putin importante in proiectarea noului dvs. site web."},{"intrebare":"Unde este gazduit site-ul dvs.?"},{"intrebare":"Puteti furniza nume de utilizator si parola?"},{"intrebare":"Aveti un buget prestabilit?"},{"intrebare":"Cate pagini va avea (estimattiv) site-ul finit?"},{"intrebare":"Aveti nevoie de chat online?"},{"intrebare":"Aveti alte fisiere media sau documente PDF care trebuiesc incorporate/create?"},{"intrebare":"Aveti nevoie de suport multi-lingvistic?"}]
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(32);
+__webpack_require__(33);
+__webpack_require__(34);
+
+
+/***/ }),
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40703,9 +40773,8 @@ dragomirWeb.directive('navigation', function() {
 });
 
 
-
 /***/ }),
-/* 31 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40755,8 +40824,26 @@ dragomirWeb.directive('parallax', function() {
   };
 });
 
+dragomirWeb.directive('slider', function() {
+  return {
+    restrict: 'A',
+    link: function(scope, element) {
+      $('.carousel.carousel-slider').carousel({fullWidth: true});
+    }
+  };
+});
+
+dragomirWeb.directive('materialbox', function() {
+  return {
+    restrict: 'A',
+    link: function(scope, element) {
+      $('.materialboxed').materialbox();
+    }
+  };
+});
+
 /***/ }),
-/* 32 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40772,19 +40859,19 @@ dragomirWeb.directive('modalContact', function() {
 });
 
 /***/ }),
-/* 33 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(34);
+__webpack_require__(36);
 
 /***/ }),
-/* 34 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {var ClientRequest = __webpack_require__(35)
-var extend = __webpack_require__(48)
-var statusCodes = __webpack_require__(49)
-var url = __webpack_require__(50)
+/* WEBPACK VAR INJECTION */(function(global) {var ClientRequest = __webpack_require__(37)
+var extend = __webpack_require__(50)
+var statusCodes = __webpack_require__(51)
+var url = __webpack_require__(52)
 
 var http = exports
 
@@ -40863,14 +40950,14 @@ http.METHODS = [
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 35 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer, global, process) {var capability = __webpack_require__(11)
 var inherits = __webpack_require__(12)
-var response = __webpack_require__(39)
+var response = __webpack_require__(41)
 var stream = __webpack_require__(13)
-var toArrayBuffer = __webpack_require__(47)
+var toArrayBuffer = __webpack_require__(49)
 
 var IncomingMessage = response.IncomingMessage
 var rStates = response.readyStates
@@ -41176,7 +41263,7 @@ var unsafeHeaders = [
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2).Buffer, __webpack_require__(0), __webpack_require__(3)))
 
 /***/ }),
-/* 36 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41297,7 +41384,7 @@ function fromByteArray (uint8) {
 
 
 /***/ }),
-/* 37 */
+/* 39 */
 /***/ (function(module, exports) {
 
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -41387,7 +41474,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
-/* 38 */
+/* 40 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -41398,7 +41485,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 39 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process, Buffer, global) {var capability = __webpack_require__(11)
@@ -41587,7 +41674,7 @@ IncomingMessage.prototype._onXHRProgress = function () {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(2).Buffer, __webpack_require__(0)))
 
 /***/ }),
-/* 40 */
+/* 42 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -41598,13 +41685,13 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 41 */
+/* 43 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 42 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41614,7 +41701,7 @@ module.exports = Array.isArray || function (arr) {
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Buffer = __webpack_require__(8).Buffer;
+var Buffer = __webpack_require__(9).Buffer;
 /*</replacement>*/
 
 function copyBuffer(src, target, offset) {
@@ -41684,7 +41771,7 @@ module.exports = function () {
 }();
 
 /***/ }),
-/* 43 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = Function.prototype.apply;
@@ -41737,13 +41824,13 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(44);
+__webpack_require__(46);
 exports.setImmediate = setImmediate;
 exports.clearImmediate = clearImmediate;
 
 
 /***/ }),
-/* 44 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -41936,7 +42023,7 @@ exports.clearImmediate = clearImmediate;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(3)))
 
 /***/ }),
-/* 45 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {
@@ -42010,7 +42097,7 @@ function config (name) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 46 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42063,7 +42150,7 @@ PassThrough.prototype._transform = function (chunk, encoding, cb) {
 };
 
 /***/ }),
-/* 47 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Buffer = __webpack_require__(2).Buffer
@@ -42096,7 +42183,7 @@ module.exports = function (buf) {
 
 
 /***/ }),
-/* 48 */
+/* 50 */
 /***/ (function(module, exports) {
 
 module.exports = extend
@@ -42121,7 +42208,7 @@ function extend() {
 
 
 /***/ }),
-/* 49 */
+/* 51 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -42191,7 +42278,7 @@ module.exports = {
 
 
 /***/ }),
-/* 50 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42218,8 +42305,8 @@ module.exports = {
 
 
 
-var punycode = __webpack_require__(51);
-var util = __webpack_require__(53);
+var punycode = __webpack_require__(53);
+var util = __webpack_require__(55);
 
 exports.parse = urlParse;
 exports.resolve = urlResolve;
@@ -42294,7 +42381,7 @@ var protocolPattern = /^([a-z0-9.+-]+:)/i,
       'gopher:': true,
       'file:': true
     },
-    querystring = __webpack_require__(54);
+    querystring = __webpack_require__(56);
 
 function urlParse(url, parseQueryString, slashesDenoteHost) {
   if (url && util.isObject(url) && url instanceof Url) return url;
@@ -42930,7 +43017,7 @@ Url.prototype.parseHost = function() {
 
 
 /***/ }),
-/* 51 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! https://mths.be/punycode v1.4.1 by @mathias */
@@ -43466,10 +43553,10 @@ Url.prototype.parseHost = function() {
 
 }(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(52)(module), __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(54)(module), __webpack_require__(0)))
 
 /***/ }),
-/* 52 */
+/* 54 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -43497,7 +43584,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 53 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43520,18 +43607,18 @@ module.exports = {
 
 
 /***/ }),
-/* 54 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-exports.decode = exports.parse = __webpack_require__(55);
-exports.encode = exports.stringify = __webpack_require__(56);
+exports.decode = exports.parse = __webpack_require__(57);
+exports.encode = exports.stringify = __webpack_require__(58);
 
 
 /***/ }),
-/* 55 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43622,7 +43709,7 @@ var isArray = Array.isArray || function (xs) {
 
 
 /***/ }),
-/* 56 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

@@ -10,28 +10,10 @@
     <meta name="description" content="{{ngMeta.description}}" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="static/css/materialize.min.css" media="screen,projection" />
     <link rel="stylesheet" href="static/css/style.css" type="text/css" />
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="static/images/favicon/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="static/images/favicon/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="static/images/favicon/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="static/images/favicon/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="static/images/favicon/apple-touch-icon-60x60.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="static/images/favicon/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="static/images/favicon/apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="static/images/favicon/apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="static/images/favicon/favicon-196x196.png" sizes="196x196" />
-    <link rel="icon" type="image/png" href="static/images/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="static/images/favicon/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="static/images/favicon/favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="static/images/favicon/favicon-128.png" sizes="128x128" />
-    <meta name="application-name" content="&nbsp;" />
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="static/images/favicon/mstile-144x144.png" />
-    <meta name="msapplication-square70x70logo" content="static/images/favicon/mstile-70x70.png" />
-    <meta name="msapplication-square150x150logo" content="static/images/favicon/mstile-150x150.png" />
-    <meta name="msapplication-wide310x150logo" content="static/images/favicon/mstile-310x150.png" />
-    <meta name="msapplication-square310x310logo" content="static/images/favicon/mstile-310x310.png" />
+
 </head>
 
 <body ng-controller="MainController">
@@ -39,54 +21,36 @@
     <header ng-controller="NavController">
         <navigation></navigation>
     </header>
-    
+
     <main ng-view>
 
     </main>
-    
-    <article style="padding-bottom: 3000px;">
 
-    </article>
+    <!--<article style="padding-bottom: 3000px;">-->
 
-    <footer class="page-footer amber darken-4">
-        <div class="fixed-action-btn horizontal click-to-toggle">
-            <a class="btn-floating btn-large amber">
-                <i class="material-icons">arrow_left</i>
-            </a>
+    <!--</article>-->
+
+    <footer class="page-footer transparent">
+
+        <div class="fixed-action-btn horizontal">
+            <a class="btn-floating btn-large red"><i class="large material-icons">more_vert</i></a>
             <ul>
-                <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-                <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-                <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-                <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+                <li><a class="btn-floating"><i class="material-icons">attach_file</i></a></li>
+                <li><a class="btn-floating"><i class="material-icons">format_quote</i></a></li>
+                <li><a class="btn-floating"><i class="material-icons">publish</i></a></li>
+                <li><a class="btn-floating"><i class="material-icons">attach_file</i></a></li>
             </ul>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Footer Content</h5>
-                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+
+
         <div class="footer-copyright">
-            <div class="container">
-                © 2014 Copyright Text
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            <div class="container center-align">
+                <span class="grey-text">&copy; {{copy()}}</span>
             </div>
         </div>
     </footer>
     <script type="text/javascript" src="static/js/lib/jquery.js"></script>
     <script type="text/javascript" src="static/js/materialize.min.js"></script>
-    <script type="text/javascript" src="static/js/main.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,4 @@
 'use strict';
-require("./NavController.js");
-require("./MainController.js");
+require("./NavController");
+require("./MainController");
+require("./QController");

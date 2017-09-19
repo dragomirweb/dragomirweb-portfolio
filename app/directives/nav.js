@@ -8,4 +8,3 @@ dragomirWeb.directive('navigation', function() {
         templateUrl: './templates/modules/nav.html'
     };
 });
-

@@ -6,14 +6,15 @@ var ngMeta = require("ng-meta");
 var dragomirWeb = angular.module('dragomirWeb');
 
 
-dragomirWeb.config(['$routeProvider', 'ngMetaProvider', function($routeProvider, $ngMetaProvider) {
+dragomirWeb.config(['$locationProvider', '$routeProvider', 'ngMetaProvider', function($locationProvider, $routeProvider, $ngMetaProvider) {
+    $locationProvider.hashPrefix('');
     $routeProvider
         .when('/Home', {
             templateUrl: './templates/views/home.html',
             data: {
                 meta: {
                     'title': 'DragomirWeb',
-                    'subtitle': 'Servicii profesionale de IT, Web Design si Ecommerce',
+                    'subtitle': 'Servicii profesionale - Site de prezentare, Magazin Online, Web Design, Aplicatii web',
                     'description': 'This is the description shown in Google search results'
                 }
             }
@@ -23,6 +24,7 @@ dragomirWeb.config(['$routeProvider', 'ngMetaProvider', function($routeProvider,
             data: {
                 meta: {
                     'title': 'Despre noi',
+                    'subtitle': 'Servicii profesionale - Site de prezentare, Magazin Online, Web Design, Aplicatii web',
                     'description': 'This is the description shown in Google search results'
                 }
             }
@@ -32,24 +34,18 @@ dragomirWeb.config(['$routeProvider', 'ngMetaProvider', function($routeProvider,
             data: {
                 meta: {
                     'title': 'Portofoliu',
+                    'subtitle': 'Servicii profesionale - Site de prezentare, Magazin Online, Web Design, Aplicatii web',
                     'description': 'This is the description shown in Google search results'
                 }
             }
         })
-        .when('/servicii', {
-            templateUrl: './templates/views/servicii.html',
-            data: {
-                meta: {
-                    'title': 'Servicii',
-                    'description': 'This is the description shown in Google search results'
-                }
-            }
-        })
+        
         .when('/intrebari si raspunsuri', {
             templateUrl: './templates/views/Q&A.html',
             data: {
                 meta: {
                     'title': 'Intrebari si raspunsuri',
+                    'subtitle': 'Servicii profesionale - Site de prezentare, Magazin Online, Web Design, Aplicatii web',
                     'description': 'This is the description shown in Google search results'
                 }
             }
@@ -59,6 +55,47 @@ dragomirWeb.config(['$routeProvider', 'ngMetaProvider', function($routeProvider,
             data: {
                 meta: {
                     'title': 'Contact',
+                    'subtitle': 'Servicii profesionale - Site de prezentare, Magazin Online, Web Design, Aplicatii web',
+                    'description': 'This is the description shown in Google search results'
+                }
+            }
+        })
+        .when('/servicii/site de prezentare', {
+            templateUrl: './templates/views/servicii/sitedeprezentare.html',
+            data: {
+                meta: {
+                    'title': 'Site de prezentare',
+                    'subtitle': 'Servicii profesionale - Site de prezentare, Magazin Online, Web Design, Aplicatii web',
+                    'description': 'This is the description shown in Google search results'
+                }
+            }
+        })
+        .when('/servicii/magazin online', {
+            templateUrl: './templates/views/servicii/magazinonline.html',
+            data: {
+                meta: {
+                    'title': 'Magazin Online',
+                    'subtitle': 'Servicii profesionale - Site de prezentare, Magazin Online, Web Design, Aplicatii web',
+                    'description': 'This is the description shown in Google search results'
+                }
+            }
+        })
+        .when('/servicii/web design', {
+            templateUrl: './templates/views/servicii/webdesign.html',
+            data: {
+                meta: {
+                    'title': 'Web Design',
+                    'subtitle': 'Servicii profesionale - Site de prezentare, Magazin Online, Web Design, Aplicatii web',
+                    'description': 'This is the description shown in Google search results'
+                }
+            }
+        })
+        .when('/servicii/aplicatii web', {
+            templateUrl: './templates/views/servicii/aplicatii.html',
+            data: {
+                meta: {
+                    'title': 'Aplicatii',
+                    'subtitle': 'Servicii profesionale - Site de prezentare, Magazin Online, Web Design, Aplicatii web',
                     'description': 'This is the description shown in Google search results'
                 }
             }

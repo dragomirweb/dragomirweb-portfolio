@@ -20,6 +20,7 @@
     "angular": "^1.6.5",
     "angular-route": "^1.6.5",
     "express": "^4.15.3",
+    "jquery": "^3.2.1",
     "ng-meta": "^1.0.0"
   },
   "devDependencies": {

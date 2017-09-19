@@ -43,3 +43,21 @@ dragomirWeb.directive('parallax', function() {
     }
   };
 });
+
+dragomirWeb.directive('slider', function() {
+  return {
+    restrict: 'A',
+    link: function(scope, element) {
+      $('.carousel.carousel-slider').carousel({fullWidth: true});
+    }
+  };
+});
+
+dragomirWeb.directive('materialbox', function() {
+  return {
+    restrict: 'A',
+    link: function(scope, element) {
+      $('.materialboxed').materialbox();
+    }
+  };
+});

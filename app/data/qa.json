@@ -1,0 +1,27 @@
+[
+    { "intrebare": "Care este publicul tinta"},
+    { "intrebare": "Care este scopul site-ului?" },
+    { "intrebare": "Care sunt valorile de baza ale firmei si cum le exprimați vizitatorilor dvs. ?" },
+    { "intrebare": "Ce va difera de competitori dvs. ?" },
+    { "intrebare": "De ce ar trebui oamenii sa faca afaceri cu dvs. mai degraba decat concurentii dvs.?" },
+    { "intrebare": "Descrieti stilul site-ului dorit." },
+    { "intrebare": "Aveti culori specifice companiei care trebuiesc utilizate?" },
+    { "intrebare": "Puteti furniza numerele Pantone pentru culorile companiei dvs.?" },
+    { "intrebare": "Aveti alte materiale pe care site-ul trebuie sa le potriveasca intr-un fel (brosuri, materiale de presa etc.)?" },
+    { "intrebare": "Ce va place la site-ul dvs. curent?" },
+    { "intrebare": "Exista vreo functionalitate sau optiuni pe site-ul dvs. curent pe care intentionati sa il pastrati (inafara continutului)?" },
+    { "intrebare": "Care sunt primele 3 frustrari ale site-ului dvs. actual?" },
+    { "intrebare": "Exista ceva pe site-urile concurentilor " },
+    { "intrebare": "Exista site/uri cu un design/model care va atrage?" },
+    { "intrebare": "Doriti acele design-uri incorporate in site-ul dvs.?" },
+    { "intrebare": "Denumiți 3 lucruri care considerati dvs. importante in proiectarea noului dvs. site web" },
+    { "intrebare": "Denumiți 3 lucruri care considerati mai putin importante in proiectarea noului dvs. site web." },
+    { "intrebare": "Unde este gazduit site-ul dvs.?" },
+    { "intrebare": "Puteti furniza nume de utilizator si parola?" },
+    { "intrebare": "Aveti un buget prestabilit?" },
+    { "intrebare": "Cate pagini va avea (estimattiv) site-ul finit?" },
+    { "intrebare": "Aveti nevoie de chat online?" },
+    { "intrebare": "Aveti alte fisiere media sau documente PDF care trebuiesc incorporate/create?" },
+    { "intrebare": "Aveti nevoie de suport multi-lingvistic?" }
+    
+]

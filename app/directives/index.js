@@ -1,3 +1,3 @@
-require("./nav.js");
-require("./attachJquery.js");
+require("./nav");
+require("./attachJquery");
 require("./modalContact");

@@ -1,4 +1,4 @@
-<nav class="top-nav transparent z-depth-2" attach-nav>
+<nav class="top-nav  z-depth-2" attach-nav>
     <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
     <div class="container">
         <div class="nav-wrapper hide-on-med-and-down">
@@ -15,18 +15,22 @@
             <a href="#top">
                 <img class="svglogo" src="static/images/logo.svg" alt="Logo"></img>
             </a>
-            <a attach-modal href="#contactModal" class="modal-trigger "><span class="white-text name">DragomirWeb</span></a>
+            <a href="tel:+40745214609" class="modal-trigger"><span class="white-text name">Tel: +40745214609</span></a>
             <a attach-modal href="#contactModal" class="modal-trigger"><span class="white-text email">&#100;&#97;&#110;&#64;&#100;&#114;&#97;&#103;&#111;&#109;&#105;&#114;&#119;&#101;&#98;&#46;&#99;&#111;&#109;</span></a>
             </div>
         </li>
-        <li ng-repeat="navItem in navItems"><a close-nav class="navitem" href="#!/{{navItem.pagina.toLowerCase().trim()}}">{{navItem.pagina}}</a></li>
+        <li  ng-repeat="navItem in navItems"><a close-nav ng-class="{ mactive: isActive('{{'/' + navItem.pagina.toLowerCase()}}') }" class="navitem" href="#/{{navItem.pagina.toLowerCase().trim()}}">{{navItem.pagina}}</a>
+        <ul class="subnav">
+            <li class="black-text" ng-repeat="subpage in navItem.subpages">
+                <a close-nav ng-class="{ mactive: isActive('{{'/servicii/'+ subpage.pagina.toLowerCase()}}') }" class="navitem" href="#/servicii/{{subpage.pagina.toLowerCase().trim()}}">{{subpage.pagina}}</a>
+            </li>
+        </ul>
+        </li>
+        
     </ul>
-
     <div id="contactModal" class="modal">
         <div class="modal-content">
-            <h4 class="black-text">Formular contact</h4>
             <modal-contact></modal-contact>
-
         </div>
     </div>
 </nav>

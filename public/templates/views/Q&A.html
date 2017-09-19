@@ -1,3 +1,5 @@
-<div class="container">
-    <h1>Intrebari si raspunsuri View</h1>
-</div>
+<section ng-controller="QController" class="section-wrap z-depth-1">
+    <ul>
+        <li ng-repeat="qItem in qItems">{{ qItem.intrebare}}</li>
+    </ul>
+</section>
